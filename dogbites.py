@@ -11,7 +11,7 @@ import csv
 import collections
 
 #https://data.cityofnewyork.us/Health/DOHMH-Dog-Bite-Data/rsgh-akpg
-url = "https://data.cityofnewyork.us/resource/rsgh-akpg.json"
+url = "https://data.cityofnewyork.us/resource/rsgh-akpg.csv"
 
 try:
     urlfile = urllib.request.urlopen(url)
@@ -32,7 +32,7 @@ lines =csv.reader(string1.splitlines()) #list of lists
 
 
 createtuple = [
-    line[8]
+    line[7]
     for line in lines
     if "DOG" in line[2]
     ]
